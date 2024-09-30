@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 max-w-lg sm:max-w-xl md:max-w-2xl">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-center">Weather Forecast Application</h1>
+        
+        <!-- Input field for city name and search button -->
+        <div class="mb-4">
+            <input type="text" id="city-input" class="p-4 w-full border rounded-md" placeholder="Enter city name">
+            <button id="search-btn" class="mt-2 p-4 bg-blue-500 text-white rounded-md">Get Weather</button>
+        </div>
+
+        <!-- Button to get weather for the user's current location -->
+        <button id="current-location-btn" class="mt-2 p-4 bg-green-500 text-white rounded-md">Get Weather by Current Location</button>
+
+        <!-- Area to display current weather data -->
+        <div id="weather-data" class="bg-white p-4 rounded-md shadow-md mt-4">
+            <h2 class="text-2xl font-bold mb-2">Current Weather</h2>
+            <p id="city-name" class="text-lg font-bold mb-2"></p>
+            <p id="weather-description" class="text-lg font-bold mb-2"></p>
+            <p id="temperature" class="text-3xl font-bold mb-2"></p>
+            <p id="humidity" class="text-lg font-bold mb-2"></p>
+            <p id="wind-speed" class="text-lg font-bold mb-2"></p>
+        </div>
+        
+        <!-- Area to display extended forecast data -->
+        <div id="forecast-data" class="bg-white p-4 rounded-md shadow-md mt-4">
+            <h2 class="text-2xl font-bold mb-2">5-Day Forecast</h2>
+            <div id="forecast-list" class="flex flex-wrap justify-center"></div>
+        </div>
+
+        <!-- Dropdown for recently searched cities -->
+        <select id="recent-cities-dropdown" class="p-4 w-full border rounded-md">
+            <option value="">Select Recent City</option>
+        </select>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
